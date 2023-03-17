@@ -8,10 +8,10 @@ function Title(props) {
 
 function Button(props) {
   const color = props.color;
-  const redBtn = <button className="btn btn-danger">Cancel</button>;
-  const greenBtn = <button className="btn btn-success">Like</button>;
+  const text = props.txt;
+  const btn = <button className={color}>{text}</button>;
 
-  return <>{color == "green" ? greenBtn : redBtn}</>;
+  return <>{btn}</>;
 }
 
 function Image(props) {
@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="container">
       <Title txt="Bonjour" />
-      <Button color="green" />
-      <Button color="red" />
+      <Button color="btn btn-success" txt="Valider" />
+      <Button color="btn btn-danger" txt="Cancel" />
       <Image target={urlImage} />
     </div>
   );
