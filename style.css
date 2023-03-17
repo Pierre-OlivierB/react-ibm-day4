@@ -1,3 +1,11 @@
 .half {
   width: 50vw;
 }
+
+body {
+  height: 100vh;
+}
+img {
+  width: 50%;
+  height: 50%;
+}
