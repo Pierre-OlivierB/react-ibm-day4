@@ -1,8 +1,10 @@
 function CompteurBonbons() {
+  const [count, setCount] = React.useState(0);
+
   return (
     <div>
-      <h3>Nombre de bonbons :</h3>
-      <button onClick="">Ajouter</button>
+      <h3>Nombre de bonbons : {count}</h3>
+      <button onClick={() => setCount(count + 1)}>Ajouter</button>
     </div>
   );
 }
