@@ -1,10 +1,17 @@
 // Création de composant
 function App() {
+  const [sentence, setSentence] = React.useState("");
   return (
     <div>
       <div>
-        <input />
-        <p>Valeur saisie : </p>
+        <input
+          onChange={(e) => {
+            // console.log(e.target.value);
+            // setSentence = input.value;
+            setSentence(e.target.value);
+          }}
+        />
+        <p>Valeur saisie : {sentence}</p>
       </div>
     </div>
   );
