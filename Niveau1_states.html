@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React-States-Niv1-Correction</title>
+    <!-- Library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function CompteurBonbons() {
+        return (
+          <div>
+            <h3>Nombre de bonbons :</h3>
+            <button onClick="">Ajouter</button>
+          </div>
+        );
+      }
+
+      // Création de composant en créant des classes
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Bonjour</h1>
+              <CompteurBonbons />
+            </div>
+          );
+        }
+      }
+
+      // Rendu dans le DOM
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
