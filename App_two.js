@@ -6,8 +6,12 @@ function Title(props) {
   return <h1>{txt}</h1>;
 }
 
-function Button() {
-  return <button></button>;
+function Button(props) {
+  const color = props.color;
+  const redBtn = <button className="btn btn-danger">Cancel</button>;
+  const greenBtn = <button className="btn btn-success">Like</button>;
+
+  return <>{color == "green" ? greenBtn : redBtn}</>;
 }
 
 function Image(props) {
@@ -18,8 +22,10 @@ function Image(props) {
 // Création de composant en créant des classes
 function App() {
   return (
-    <div>
+    <div className="container">
       <Title txt="Bonjour" />
+      <Button color="green" />
+      <Button color="red" />
       <Image target={urlImage} />
     </div>
   );
