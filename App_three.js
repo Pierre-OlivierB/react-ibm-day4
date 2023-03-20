@@ -28,11 +28,27 @@ function TitleComponent() {
   return <h1>Le panier de légumes</h1>;
 }
 
+function Legumes(props) {
+  const item = props.items;
+
+  return (
+    <ul>
+      {item.map((legume) => (
+        <li key={legume.name}>
+          <p>Name : {legume.name}</p>
+          <p>Prix : {legume.prix}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 // Création de composant en créant des classes
 function App() {
   return (
     <div>
       <TitleComponent />
+      <Legumes items={lesLegumes} />
     </div>
   );
 }
